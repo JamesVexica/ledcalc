@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>LED Energy Payback Calculator</h1>
+        </div>
+        <div class="col-lg-4">
+          <img class="float-right" width="200px" src="img/logo.png" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Traditional Installation</h3>
+              <p class="mb-1 float-left">High Pressure Sodium</p>
+              <p class="mb-0 float-right">Installed 1000W HPS</p>
+            </div>
+            <div class="card-body">
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Expected Life Span</span
+                  >
+                </div>
+                <input
+                  id="traditionalLifeSpan"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="20000"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">hours</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >System Watts total per Luminaire</span
+                  >
+                </div>
+                <input
+                  id="traditionalSystemWatts"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="1080"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">W</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Cost of Each Lamp/Light unit</span
+                  >
+                </div>
+                <input
+                  id="traditionalCostOfLamp"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="300.00"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Cost per lamp replacement</span
+                  >
+                </div>
+                <input
+                  id="traditionalCostperReplacement"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="44.95"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Electricity used over LED life span</span
+                  >
+                </div>
+                <input
+                  id="traditionalElectricityUsed"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">kWh</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Current Price per kWh</span
+                  >
+                </div>
+                <input
+                  id="traditionalCurrentPrice"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="0.14"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Electricity Cost (Per lamp over LED Life span)</span
+                  >
+                </div>
+                <input
+                  id="traditionalElectricityCost"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Number of lamps required for equivalent lifespan of
+                    LED</span
+                  >
+                </div>
+                <input
+                  id="traditionalNumberOfLamps"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Equivalent LED life lamp expense</span
+                  >
+                </div>
+                <input
+                  id="traditionalEquivalentLed"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Estimated lamp life in years based on daily usage</span
+                  >
+                </div>
+                <input
+                  id="traditionalEstimatedLampLife"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">years</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Total Lighting Spend over LED life span</span
+                  >
+                </div>
+                <input
+                  id="traditionalTotalLightingSpend"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1"
+                    >£ (per lamp)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-1">
+            <div class="card-header">
+              <p class="mb-1 float-left">Calculate Your Energy Savings</p>
+            </div>
+            <div class="card-body">
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Number of luminaires</span
+                  >
+                </div>
+                <input
+                  id="traditionalNumberofLuminairs"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="50"
+                />
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Total System Wattage</span
+                  >
+                </div>
+                <input
+                  id="traditionalTotalSystemWatts"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">W</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Your estimated daily usage</span
+                  >
+                </div>
+                <input
+                  id="traditionalDailyUsage"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="16"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">hours</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Average Days in months</span
+                  >
+                </div>
+                <input
+                  id="traditionalDaysinMonth"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="30"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">days</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Cost of Luminairs</span
+                  >
+                </div>
+                <input
+                  id="traditionalCostOfLuminair"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <p class="mt-1 mb-0">Monthly Savings</p>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >kWh electricity used per month</span
+                  >
+                </div>
+                <input
+                  id="traditionalkWhUsedperMonth"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">kWh</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Electricity Cost</span
+                  >
+                </div>
+                <input
+                  id="traditionalElectricityCost"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Maintenance Cost</span
+                  >
+                </div>
+                <input
+                  id="traditionalMaintenanceCost"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >CO2 Tax (£12 per tonne)</span
+                  >
+                </div>
+                <input
+                  id="traditionalCO2Tax"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <p class="mt-1 mb-0">Yearly Savings</p>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >kWh electricity used per Year</span
+                  >
+                </div>
+                <input
+                  id="traditionalKwhElectrictiyUsedYear"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">kWh</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Electricity Cost</span
+                  >
+                </div>
+                <input
+                  id="traditionalElectricityCostYear"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Maintenance Cost</span
+                  >
+                </div>
+                <input
+                  id="traditionalMaintenanceCostYear"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >CO2 Tax (£16 per tonne)</span
+                  >
+                </div>
+                <input
+                  id="traditionalCO2Tax"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Total Cost</span
+                  >
+                </div>
+                <input
+                  id="traditionalTotalCostLast"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Savings by switching from existing installation</span
+                  >
+                </div>
+                <input
+                  id="traditionalSavingsBySwitching"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Total percentage cost reduction</span
+                  >
+                </div>
+                <input
+                  id="traditionalPercentageReduction"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Payback</span
+                  >
+                </div>
+                <input
+                  id="traditionalExpectedHours"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">years</span>
+                </div>
+              </div>
+              <p class="mt-1 mb-0">Yearly CO2 Output</p>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >CO2 Output</span
+                  >
+                </div>
+                <input
+                  id="traditionalCO2Output"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Yearly CO2 Savings</span
+                  >
+                </div>
+                <input
+                  id="traditionalCO2YearlySavings"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Reduction in energy consumption/CO2 output</span
+                  >
+                </div>
+                <input
+                  id="traditionalCO2Reduction"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Odyssey Installation</h3>
+              <p class="mb-1 float-left">High Pressure Sodium</p>
+              <p class="mb-0 float-right">Installed 1000W HPS</p>
+            </div>
+            <div class="card-body">
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Expected Life Span</span
+                  >
+                </div>
+                <input
+                  id="OdysseyLifeSpan"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="50000"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">hours</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >System Watts total per Luminaire</span
+                  >
+                </div>
+                <input
+                  id="OdysseySystemWatts"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="580"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">W</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Cost of Each Lamp/Light unit</span
+                  >
+                </div>
+                <input
+                  id="OdysseyCostOfLamp"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="700.00"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Cost per lamp replacement</span
+                  >
+                </div>
+                <input
+                  id="OdysseyCostperReplacement"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="0.00"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Electricity used over LED life span</span
+                  >
+                </div>
+                <input
+                  id="OdysseyElectricityUsed"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">kWh</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Current Price per kWh</span
+                  >
+                </div>
+                <input
+                  id="OdysseyCurrentPrice"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="0.14"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Electricity Cost (Per lamp over LED Life span)</span
+                  >
+                </div>
+                <input
+                  id="OdysseyElectricityCost"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Number of lamps required for equivalent lifespan of
+                    LED</span
+                  >
+                </div>
+                <input
+                  id="OdysseyNumberOfLamps"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Equivalent LED life lamp expense</span
+                  >
+                </div>
+                <input
+                  id="OdysseyEquivalentLed"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Estimated lamp life in years based on daily usage</span
+                  >
+                </div>
+                <input
+                  id="OdysseyEstimatedLampLife"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">years</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Total Lighting Spend over LED life span</span
+                  >
+                </div>
+                <input
+                  id="OdysseyTotalLightingSpend"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1"
+                    >£ (per lamp)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-1">
+            <div class="card-header">
+              <p class="mb-1 float-left">Calculate Your Energy Savings</p>
+            </div>
+            <div class="card-body">
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Number of luminaires</span
+                  >
+                </div>
+                <input
+                  id="OdysseyNumberofLuminairs"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="50"
+                />
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Total System Wattage</span
+                  >
+                </div>
+                <input
+                  id="OdysseyTotalSystemWatts"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">W</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Your estimated daily usage</span
+                  >
+                </div>
+                <input
+                  id="OdysseyDailyUsage"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="16"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">hours</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Average Days in months</span
+                  >
+                </div>
+                <input
+                  id="OdysseyDaysinMonth"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="30"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">days</span>
+                </div>
+              </div>
+
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Cost of Luminairs</span
+                  >
+                </div>
+                <input
+                  id="OdysseyCostOfLuminair"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <p class="mt-1 mb-0">Monthly Savings</p>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >kWh electricity used per month</span
+                  >
+                </div>
+                <input
+                  id="OdysseykWhUsedperMonth"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">kWh</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Electricity Cost</span
+                  >
+                </div>
+                <input
+                  id="OdysseyElectricityCost"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Maintenance Cost</span
+                  >
+                </div>
+                <input
+                  id="OdysseyMaintenanceCost"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >CO2 Tax (£12 per tonne)</span
+                  >
+                </div>
+                <input
+                  id="OdysseyCO2Tax"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <p class="mt-1 mb-0">Yearly Savings</p>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >kWh electricity used per Year</span
+                  >
+                </div>
+                <input
+                  id="OdysseyKwhElectrictiyUsedYear"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">kWh</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Electricity Cost</span
+                  >
+                </div>
+                <input
+                  id="OdysseyElectricityCostYear"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Maintenance Cost</span
+                  >
+                </div>
+                <input
+                  id="OdysseyMaintenanceCostYear"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-1 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >CO2 Tax (£16 per tonne)</span
+                  >
+                </div>
+                <input
+                  id="OdysseyCO2Tax"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Total Cost</span
+                  >
+                </div>
+                <input
+                  id="OdysseyTotalCostLast"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Savings by switching from existing installation</span
+                  >
+                </div>
+                <input
+                  id="OdysseySavingsBySwitching"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">£</span>
+                </div>
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Total percentage cost reduction</span
+                  >
+                </div>
+                <input
+                  id="OdysseyPercentageReduction"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">%</span>
+                </div>
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Payback</span
+                  >
+                </div>
+                <input
+                  id="OdysseyExpectedHours"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon1">years</span>
+                </div>
+              </div>
+              <p class="mt-1 mb-0">Yearly CO2 Output</p>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >CO2 Output</span
+                  >
+                </div>
+                <input
+                  id="OdysseyCO2Output"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Yearly CO2 Savings</span
+                  >
+                </div>
+                <input
+                  id="OdysseyCO2YearlySavings"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+              </div>
+              <div class="input-group mb-0 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"
+                    >Reduction in energy consumption/CO2 output</span
+                  >
+                </div>
+                <input
+                  id="OdysseyCO2Reduction"
+                  type="number"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="card mt-1">
+            <div class="card-body">
+              <p>kWh = Kilowatt-hours</p>
+              <p>
+                We would like to point out that the figures provided in this
+                speadsheet are estimations based on the information provided by
+                the client
+              </p>
+              <p>
+                This spreadsheet is intended solely as a comparison between
+                existing lighting units and the LED alternatives offered by us.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End your project here-->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript" src="js/calc.js"></script>
+  </body>
+</html>
