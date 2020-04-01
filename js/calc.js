@@ -137,12 +137,17 @@ let pageUpdate = function() {
   odysseyEstimatedLampLife.value = lampList.toFixed(2);
   let maintCost = parseFloat(costOfLumin.toFixed(2) / lampList.toFixed(2)) / 12;
   traditionalMaintenanceCost.value = Math.round(maintCost * 100) / 100;
-  traditionalKwHElectricityUsedYear.value =
-    traditionalkWhUsedperMonth.value * 12;
+  let kwheeee = traditionalkWhUsedperMonth.value * 12;
+  traditionalKwHElectricityUsedYear.value = kwheeee.toFixed(2)
+
   let CO2Output = (0.54522 * traditionalKwHElectricityUsedYear.value) / 1000;
+
   traditionalCO2Output.value = CO2Output.toFixed(2);
-  traditionalCO2Tax2.value = CO2Output.toFixed(2) * 16;
-  traditionalCO2Tax.value = traditionalCO2Tax2.value / 12;
+    let co34896 = CO2Output.toFixed(2) * 16;
+  traditionalCO2Tax2.value = co34896.toFixed(2)
+  let co3874rjgrf = traditionalCO2Tax2.value / 12;
+  traditionalCO2Tax.value = co3874rjgrf.toFixed(2)
+
   let yearCost =
     traditionalKwHElectricityUsedYear.value * traditionalCurrentPrice.value;
   traditionalElectricityCostYear.value = yearCost.toFixed(2);
@@ -185,13 +190,16 @@ let pageUpdate = function() {
     parseFloat(odysseykWhUsedperMonth.value) *
     parseFloat(odysseyCurrentPrice.value);
   odysseyElectricityCost2.value = eleCost.toFixed(2);
-  odysseyKwHElectricityUsedYear.value =
-    parseFloat(odysseykWhUsedperMonth.value) * 12;
+  let hekww = parseFloat(odysseykWhUsedperMonth.value) * 12;
+  odysseyKwHElectricityUsedYear.value = hekww.toFixed(2)
+
   let oCO2Output =
     (0.54522 * parseFloat(odysseyKwHElectricityUsedYear.value)) / 1000;
   odysseyCO2Output.value = oCO2Output.toFixed(2);
-  odysseyCO2Tax2.value = parseFloat(odysseyCO2Output.value) * 16;
-  odysseyCO2Tax.value = parseFloat(odysseyCO2Tax2.value) * 12;
+  let co2fhjf = parseFloat(odysseyCO2Output.value) * 16
+  odysseyCO2Tax2.value = co2fhjf.toFixed(2);
+  let co2fiohsdgf = parseFloat(odysseyCO2Tax2.value) * 12;
+  odysseyCO2Tax.value = co2fiohsdgf.toFixed(2)
   let yeCost =
     parseFloat(odysseyKwHElectricityUsedYear.value) *
     parseFloat(odysseyCurrentPrice.value);
@@ -234,3 +242,24 @@ let pageUpdate = function() {
   document.getElementById("trWattage").innerHTML = traditionalTotalSystemWatts.value+"W";
 };
 pageUpdate();
+document.getElementById("customTrad").innerHTML = `
+                 <input
+                  type="text"
+                  class="form-control float-left"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="High Pressure Sodium"
+                  style="width:325px;"
+                />
+  `
+document.getElementById("odyCustom").innerHTML = `
+               <input
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value="Odyssey Installation"
+                />
+`
