@@ -6,8 +6,10 @@ let odysseyID = [];
 pageID.forEach(e => {
   if (e.id.includes("traditional")) {
     traditionalID.push(e);
-  } else {
+  } else if(e.id.includes("Odyssey")){
     odysseyID.push(e);
+  }else{
+
   }
 });
 //add onchange listeners
@@ -228,5 +230,7 @@ let pageUpdate = function() {
       parseFloat(traditionalCO2Output.value)) *
     100;
   odysseyCO2Reduction.value = CO2Ou.toFixed(2);
+  document.getElementById("ourCurrentW").innerHTML = odysseyTotalSystemWatts.value+"W";
+  document.getElementById("trWattage").innerHTML = traditionalTotalSystemWatts.value+"W";
 };
 pageUpdate();
