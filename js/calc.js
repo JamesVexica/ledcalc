@@ -18,6 +18,8 @@ traditionalID.forEach(e => {
     document.getElementById(e.id).addEventListener("change", f => {
       pageUpdate();
     });
+  }else{
+    document.getElementById(e.id).classList.add("disab")
   }
 });
 odysseyID.forEach(e => {
@@ -25,6 +27,8 @@ odysseyID.forEach(e => {
     document.getElementById(e.id).addEventListener("change", f => {
       pageUpdate();
     });
+  }else{
+    document.getElementById(e.id).classList.add("disab")
   }
 });
 
