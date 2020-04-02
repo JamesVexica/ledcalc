@@ -250,7 +250,7 @@ document.getElementById("customTrad").innerHTML = `
                   aria-label="Username"
                   aria-describedby="basic-addon1"
                   value="High Pressure Sodium"
-                  style="width:325px;"
+                  style="width:100%;"
                 />
   `
 document.getElementById("odyCustom").innerHTML = `
